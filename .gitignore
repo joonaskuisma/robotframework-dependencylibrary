@@ -1,0 +1,11 @@
+*DependencySolver.log
+*DependencySolver.pabot.txt
+venv_*/
+__pycache__
+*.html
+*.xml
+test_output/
+dist/
+*egg-info/
+dependency_solver_*/
+demo/

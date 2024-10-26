@@ -1,0 +1,43 @@
+[build-system]
+requires = [
+  "setuptools>=61.0",
+  "robotframework>=7.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robotframework-dependencylibrary"
+dynamic = ["version"]
+dependencies = [
+  "robotframework>=6.0.0",
+]
+requires-python = ">=3.8"
+authors = [
+  { name="Alexander Kozhevnikov", email="mentalisttraceur@gmail.com" },
+]
+maintainers = [
+  { name="Joonas Kuisma", email="kuisma.joonas@gmail.com" },
+]
+description="Declare dependencies between Robot Framework tests"
+readme = "README.md"
+license = {file = "LICENSE"}
+
+keywords = ["Robot Framework", "DependencyLibrary", "prerunmodifier"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Testing",
+    "Framework :: Robot Framework :: Library",
+    "License :: OSI Approved :: Zero-Clause BSD (0BSD)",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+DependencySolver = "DependencyLibrary.run:main"
+
+[project.urls]
+Homepage = "https://github.com/mentalisttraceur/robotframework-dependencylibrary"
+Issues = "https://github.com/mentalisttraceur/robotframework-dependencylibrary/issues"
+
+[tool.setuptools.dynamic]
+version = {attr = "DependencyLibrary._version.__version__"}
